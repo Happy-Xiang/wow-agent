@@ -80,7 +80,7 @@ class Candidate(BaseModel):
 
 agent = Agent(
     name="简历助手",
-    instructions="根据要求的格式抽取相应的信息",
+    instructions="请从提供的文本中抽取姓名、性别和居住地信息，严格按照指定的JSON格式返回结果，不要添加额外内容。输出格式应符合Candidate模型结构：{name: str, gender: str, location: str}",
     model=llm,
     output_type=Candidate,
 )
